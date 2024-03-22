@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 100px;
+  gap: 20px;
+  border: 2px dashed green;
+}
+
+.content img {
+  width: 100%;
+}

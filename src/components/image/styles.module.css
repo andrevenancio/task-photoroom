@@ -1,0 +1,6 @@
+.container {
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  border: 1px dashed red;
+}
