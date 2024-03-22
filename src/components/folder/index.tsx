@@ -2,8 +2,9 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 
-import { deleteFolder, moveImageToFolder } from "@/state/reducers/folders" // Import your deleteFolder and moveImage actions
+import { deleteFolder, moveImageToFolder } from "@/state/reducers/folders"
 
+import { ButtonComponent } from "../button"
 import { ImageComponent } from "../image"
 
 import styles from "./styles.module.css"
@@ -63,7 +64,7 @@ export const FolderComponent = ({ name, images }: FolderProps) => {
     <div className={styles.container}>
       <div className={styles.name}>
         <h2>{name}</h2>
-        <button onClick={handleDelete}>Delete</button>
+        <ButtonComponent onClick={handleDelete} icon="delete" />
       </div>
       <div
         className={styles.content}

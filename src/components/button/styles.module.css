@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--foreground-color);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: var(--border-radius-s);
+  padding: var(--space-s);
+}
+
+.container:hover {
+  color: var(--background-color);
+  background-color: var(--highlight-color);
+}
+
+.container i {
+  color: inherit;
+}

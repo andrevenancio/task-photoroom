@@ -7,6 +7,8 @@ import { UploadComponent } from "@/components/upload"
 import { DEFAULT_FOLDER } from "@/constants"
 import { addImageToFolder } from "@/state/reducers/folders"
 
+import styles from "@/styles/upload.module.css"
+
 export default function Page() {
   const router = useRouter()
   const dispatch = useDispatch()
@@ -20,10 +22,7 @@ export default function Page() {
 
     const image = imageData.image as HTMLCanvasElement
     const imageBase64 = image.toDataURL("image/png")
-    const imageBase64Data = imageBase64.replace(
-      process.env.NEXT_PUBLIC_BASE64_IMAGE_HEADER!,
-      ""
-    )
+    const imageBase64Data = imageBase64.replace("data:image/png;base64,", "")
     const data = {
       image_file_b64: imageBase64Data,
     }
@@ -40,16 +39,16 @@ export default function Page() {
     router.push("/")
   }
 
-  const handleImageDrop = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      uploadImageToServer(e.target.files[0])
+  const handleImageDrop = (file: File) => {
+    if (file) {
+      uploadImageToServer(file)
     } else {
       console.error("No file")
     }
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <UploadComponent onImageDrop={handleImageDrop} />
     </div>
   )

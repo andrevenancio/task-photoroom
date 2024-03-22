@@ -1,6 +1,16 @@
 :root {
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 32px;
+
+  --border-radius-s: 4px;
+  --border-radius-m: 10px;
+
   --background-color: rgb(32, 32, 32);
   --foreground-color: rgb(210, 210, 210);
+  --highlight-color: rgb(255, 255, 255);
+
+  --border-color: #555555;
 }
 
 * {

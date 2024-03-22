@@ -2,5 +2,6 @@
   aspect-ratio: 1 / 1;
   background-size: cover;
   background-position: center;
-  border: 1px dashed red;
+  border-radius: var(--border-radius-m);
+  border: 1px solid var(--border-color);
 }

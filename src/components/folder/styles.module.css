@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin-bottom: var(--space-l);
 }
 
 .name {
@@ -8,12 +9,18 @@
   justify-content: space-between;
 }
 
+.name h2 {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: var(--space-m);
+  opacity: 0.5;
+}
+
 .content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   min-height: 100px;
   gap: 20px;
-  border: 2px dashed green;
 }
 
 .content img {

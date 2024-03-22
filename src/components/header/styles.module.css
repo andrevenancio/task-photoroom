@@ -1,7 +1,12 @@
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #f1f1f1;
+  justify-content: space-between;
+  padding: var(--space-m) var(--space-l);
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.container a {
+  color: var(--foreground-color);
 }

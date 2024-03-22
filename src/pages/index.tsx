@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 
+import { ButtonComponent } from "@/components/button"
 import { FolderComponent } from "@/components/folder"
 import { createFolder } from "@/state/reducers/folders"
 import { RootState } from "@/state/store"
@@ -25,7 +26,9 @@ export default function Page() {
           <FolderComponent key={index} {...folder} />
         ))}
       </div>
-      <button onClick={handleCreateFolder}>Create Folder</button>
+      <ButtonComponent onClick={handleCreateFolder} icon="add">
+        New Folder
+      </ButtonComponent>
     </div>
   )
 }

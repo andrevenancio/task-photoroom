@@ -1,7 +1,20 @@
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   cursor: pointer;
-  border: 1px dashed red;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.message {
+  font-size: 14px;
 }

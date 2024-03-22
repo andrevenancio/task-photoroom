@@ -1,5 +1,6 @@
-import Link from "next/link"
 import { useRouter } from "next/router"
+
+import { ButtonComponent } from "../button"
 
 import styles from "./styles.module.css"
 
@@ -10,13 +11,13 @@ export const HeaderComponent = () => {
     return (
       <header className={styles.container}>
         &nbsp;
-        <Link href="/upload">Upload</Link>
+        <ButtonComponent href="/upload" icon="add" />
       </header>
     )
   }
   return (
     <header className={styles.container}>
-      <Link href="/">Back</Link>
+      <ButtonComponent href="/" icon="arrow_back" />
     </header>
   )
 }
