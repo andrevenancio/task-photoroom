@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="Task Photoroom" src="public/preview.png">
+</p>
+
 # Task Photoroom
 
 This repository is a take home assignment as part of Photoroom recruitment process.
